@@ -1,5 +1,4 @@
 
-
 let selectedSeats = [];
 let availableSeats = 12;
 
@@ -16,6 +15,21 @@ function updateAvailableSeats() {
     availableSeatsElement.textContent = `Available Seats: ${availableSeats}`;
 }
 
+function updateSelectedSeatsPrices() {
+    const selectedSeatsPricesElement = document.getElementById('selectedSeatsPrices');
+
+    selectedSeatsPricesElement.innerHTML = '';
+
+    
+    selectedSeats.forEach(seatId => {
+        const seat = document.getElementById(seatId);
+        const seatPrice = 550; 
+        const seatPriceElement = document.createElement('div');
+        seatPriceElement.textContent = `Seat ${seatId}: ${seatPrice}`;
+        selectedSeatsPricesElement.appendChild(seatPriceElement);
+    });
+}
+
 function selectSeat(seatId) {
     const seat = document.getElementById(seatId);
 
@@ -26,12 +40,15 @@ function selectSeat(seatId) {
     }
 
     if (selectedSeats.length === 4) {
-        alert('You can select only four seats');
+        alert('You can select only 4 seats');
     }
 
     updateTotalPrice();
     updateAvailableSeats();
+    updateSelectedSeatsPrices(); 
 }
+
+
 
 document.addEventListener('click', function(event) {
     const clickedElement = event.target;
@@ -40,13 +57,14 @@ document.addEventListener('click', function(event) {
         selectSeat(clickedElement.id);
     }
 });
-
-// Initialize available seats
-updateAvailableSeats();
+ updateAvailableSeats();
 
 
 
 
+
+
+// >>>>>>>>>>>>>>>>>
 
 function btnClick() {
     var footerElement = document.getElementById("footer")
