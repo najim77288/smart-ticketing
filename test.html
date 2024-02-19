@@ -30,7 +30,7 @@
     <h1>End-to-End Travel With</h1>
     <h2>P Paribohon</h2>
     <p>Yes you can run unit tests and view the result directly within the app. the intergrated testing features allow for a streamlined</p>
-    <button>Buy Ticket</button>
+    <button onclick="btnClick()" class="my-btn">Buy Ticket</button>
   </div>
 
   <!--  -->
@@ -106,6 +106,75 @@
         <p>Per</p>
       </div>
   </div>
+ <!-- functinal coding start from here -->
+<section id="footer">
+  <div class="seats-div-container">
+    <h3 class="slect">Select Your Seat</h3>
+    <div class="avilable">
+    <div class="avl-one">
+     <img src="./images/seat-green.png" alt="">
+      <div id="availableSeats">Available Seats:12</div>
+    </div>
+     <div class="avl-two">
+       <img src="./images/seat-green.png" alt="">
+        <h4>Selected</h4>
+     </div>
+    </div>
+  </div>
 
+
+  <div class="najim-div-conteiner">
+    <div class="seats-container">
+     <div class="seat-group">         
+         <div class="seat-row" id="A">
+            <div>A</div>
+             <div class="seat" id="A-1">A1</div>
+             <div class="seat" id="A-2">A2</div>
+             <div class="seat" id="A-3">A3</div>
+             <div class="seat" id="A-4">A4</div>
+         </div>
+     </div>
+     <div class="seat-group">
+         
+         <div class="seat-row" id="B">
+            <div>B</div> 
+             <div class="seat" id="B-1">B1</div>
+             <div class="seat" id="B-2">B2</div>
+             <div class="seat" id="B-3">B3</div>
+             <div class="seat" id="B-4">B4</div>
+         </div>
+     </div>
+     <div class="seat-group">
+         <div class="seat-row" id="C">
+              <div>C</div>
+             <div class="seat" id="C-1">C1</div>
+             <div class="seat" id="C-2">C2</div>
+             <div class="seat" id="C-3">C3</div>
+             <div class="seat" id="C-4">C4</div>
+   
+         </div>
+     </div>
+   </div>
+  
+   <div class="input-div">
+    <div><h4>Select Your seat</h4></div>
+    <div id="totalPrice">Total Price:0</div> <br> <br>
+    <div> <label for="">Passanger Name</label><br>
+      <input type="text" id="najim" placeholder="Enter your name">
+    </div>
+    <div>
+      <label for="">Phone Number</label>  <br>
+      <input type="text" id="najim" placeholder="Enter your Phone Number">
+    </div>
+    <div>
+      <label for="">Email ID</label><br>
+      <input type="text" id="najim" placeholder="Enter your Email">
+    </div>
+    <div> <button class="next-btn">Next</button></div>
+   </div>
+   </div>
+  
+</section>
+<script src="script.js"></script>
 </body>
 </html>
